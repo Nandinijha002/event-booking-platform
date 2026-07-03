@@ -1,0 +1,173 @@
+[
+  {
+    "id": "evt001",
+    "name": "Sur Sangam — Live Music Night",
+    "category": "Music",
+    "image": "🎤",
+    "date": "2026-08-15",
+    "time": "19:00",
+    "venue": "Jawaharlal Nehru Stadium",
+    "city": "Delhi NCR",
+    "price": 1499,
+    "ticketsAvailable": 320,
+    "shortDescription": "An evening of soulful Bollywood and indie fusion with top playback singers.",
+    "fullDescription": "Sur Sangam brings together India's finest playback singers and indie artists for a night of soulful music spanning classic Bollywood melodies, Sufi renditions, and contemporary fusion. Expect a live 12-piece band, immersive stage visuals, and a set list crafted for both nostalgia and discovery.",
+    "schedule": [
+      { "time": "18:00", "activity": "Gates open & seating" },
+      { "time": "19:00", "activity": "Opening act — indie fusion band" },
+      { "time": "20:00", "activity": "Main performance begins" },
+      { "time": "22:30", "activity": "Encore & closing" }
+    ],
+    "organizer": { "name": "Rhythm House Events", "email": "contact@rhythmhouse.in", "phone": "+91 98100 22345" }
+  },
+  {
+    "id": "evt002",
+    "name": "TechSprint Bengaluru — Developer Summit",
+    "category": "Technology",
+    "image": "💻",
+    "date": "2026-09-05",
+    "time": "09:30",
+    "venue": "Bangalore International Exhibition Centre",
+    "city": "Bengaluru",
+    "price": 2999,
+    "ticketsAvailable": 500,
+    "shortDescription": "A full-day summit on AI, cloud, and product engineering with industry leaders.",
+    "fullDescription": "TechSprint Bengaluru is a full-day developer summit featuring keynotes and hands-on workshops on AI/ML, cloud-native architecture, and product engineering. Network with engineers from top Indian and global tech companies, attend live coding sessions, and explore the startup expo floor.",
+    "schedule": [
+      { "time": "09:30", "activity": "Registration & breakfast" },
+      { "time": "10:30", "activity": "Keynote: The Future of AI in India" },
+      { "time": "12:00", "activity": "Parallel workshop tracks begin" },
+      { "time": "14:00", "activity": "Lunch & startup expo" },
+      { "time": "16:00", "activity": "Panel discussion & closing keynote" }
+    ],
+    "organizer": { "name": "CodeCircle India", "email": "hello@codecircle.in", "phone": "+91 98450 11223" }
+  },
+  {
+    "id": "evt003",
+    "name": "Navratri Garba Nights",
+    "category": "Festival",
+    "image": "🪔",
+    "date": "2026-10-12",
+    "time": "20:00",
+    "venue": "GMDC Ground",
+    "city": "Ahmedabad",
+    "price": 899,
+    "ticketsAvailable": 1200,
+    "shortDescription": "Nine nights of traditional Garba and Dandiya with live dhol and folk singers.",
+    "fullDescription": "Celebrate Navratri in true Gujarati style with nine nights of Garba and Dandiya Raas. Live dhol players, folk singers, and a beautifully decorated pandal set the stage. Traditional attire is encouraged, and food stalls serve authentic Gujarati snacks through the night.",
+    "schedule": [
+      { "time": "20:00", "activity": "Aarti & ceremonial opening" },
+      { "time": "20:30", "activity": "Garba begins with live dhol" },
+      { "time": "22:30", "activity": "Dandiya Raas competition" },
+      { "time": "00:00", "activity": "Prize distribution & closing" }
+    ],
+    "organizer": { "name": "Amdavad Utsav Samiti", "email": "info@amdavadutsav.org", "phone": "+91 99250 33445" }
+  },
+  {
+    "id": "evt004",
+    "name": "Startup Pitch Fest",
+    "category": "Business",
+    "image": "📈",
+    "date": "2026-08-28",
+    "time": "10:00",
+    "venue": "Hyderabad International Convention Centre",
+    "city": "Hyderabad",
+    "price": 1999,
+    "ticketsAvailable": 250,
+    "shortDescription": "Watch 20 shortlisted startups pitch to top VCs for a chance at funding.",
+    "fullDescription": "Startup Pitch Fest brings together 20 shortlisted early-stage startups to pitch live in front of a panel of leading venture capitalists. Attendees get access to investor networking sessions, mentorship booths, and a marketplace showcasing innovative Indian products.",
+    "schedule": [
+      { "time": "10:00", "activity": "Registration & networking breakfast" },
+      { "time": "11:00", "activity": "Pitch sessions — Batch 1" },
+      { "time": "13:30", "activity": "Lunch & investor networking" },
+      { "time": "15:00", "activity": "Pitch sessions — Batch 2" },
+      { "time": "17:30", "activity": "Winner announcement" }
+    ],
+    "organizer": { "name": "LaunchPad Ventures", "email": "events@launchpad.in", "phone": "+91 90000 44556" }
+  },
+  {
+    "id": "evt005",
+    "name": "Laugh Riot — Stand-Up Comedy Tour",
+    "category": "Comedy",
+    "image": "🎭",
+    "date": "2026-07-25",
+    "time": "20:30",
+    "venue": "Prithvi Theatre",
+    "city": "Mumbai",
+    "price": 699,
+    "ticketsAvailable": 180,
+    "shortDescription": "An evening of stand-up comedy with four of India's rising comics.",
+    "fullDescription": "Laugh Riot brings four of India's sharpest young stand-up comedians together for a night of original, unfiltered comedy covering everyday Indian life, relationships, and social media culture. Doors open early for a limited pre-show meet-and-greet.",
+    "schedule": [
+      { "time": "20:00", "activity": "Doors open" },
+      { "time": "20:30", "activity": "Opening sets" },
+      { "time": "21:15", "activity": "Headline performance" },
+      { "time": "22:15", "activity": "Closing & audience Q&A" }
+    ],
+    "organizer": { "name": "Chuckle Club Productions", "email": "book@chuckleclub.in", "phone": "+91 98200 55667" }
+  },
+  {
+    "id": "evt006",
+    "name": "Career Catalyst — Campus Placement Workshop",
+    "category": "Workshop",
+    "image": "🎓",
+    "date": "2026-08-02",
+    "time": "10:00",
+    "venue": "Pune Institute of Technology Auditorium",
+    "city": "Pune",
+    "price": 499,
+    "ticketsAvailable": 400,
+    "shortDescription": "Resume building, mock interviews, and aptitude prep for final-year students.",
+    "fullDescription": "Career Catalyst is a hands-on workshop designed for final-year engineering and management students preparing for campus placements. Sessions cover resume building, group discussions, mock technical and HR interviews, and aptitude test strategy, led by HR professionals from top companies.",
+    "schedule": [
+      { "time": "10:00", "activity": "Registration" },
+      { "time": "10:30", "activity": "Resume building session" },
+      { "time": "12:00", "activity": "Mock group discussions" },
+      { "time": "14:00", "activity": "Mock interviews (1-on-1)" },
+      { "time": "16:00", "activity": "Aptitude test strategy & Q&A" }
+    ],
+    "organizer": { "name": "CampusReady Foundation", "email": "support@campusready.in", "phone": "+91 87650 77889" }
+  },
+  {
+    "id": "evt007",
+    "name": "Jaipur Literature & Arts Fair",
+    "category": "Festival",
+    "image": "📚",
+    "date": "2026-11-20",
+    "time": "09:00",
+    "venue": "Diggi Palace",
+    "city": "Jaipur",
+    "price": 0,
+    "ticketsAvailable": 2000,
+    "shortDescription": "Free entry festival of authors, poets, and artists over three days.",
+    "fullDescription": "The Jaipur Literature & Arts Fair is a free, three-day celebration of literature and visual arts, featuring panel discussions with acclaimed authors, poetry slams, live sketching sessions, and a curated marketplace of independent publishers and artisans.",
+    "schedule": [
+      { "time": "09:00", "activity": "Fair opens — marketplace & exhibits" },
+      { "time": "11:00", "activity": "Author panel: New Voices in Indian Fiction" },
+      { "time": "14:00", "activity": "Poetry slam" },
+      { "time": "16:30", "activity": "Live sketching & art demos" }
+    ],
+    "organizer": { "name": "Pink City Cultural Trust", "email": "info@pinkcitytrust.org", "phone": "+91 94140 88990" }
+  },
+  {
+    "id": "evt008",
+    "name": "Cricket Premier Fan Fest",
+    "category": "Sports",
+    "image": "🏏",
+    "date": "2026-09-18",
+    "time": "16:00",
+    "venue": "M. Chinnaswamy Stadium Grounds",
+    "city": "Bengaluru",
+    "price": 799,
+    "ticketsAvailable": 600,
+    "shortDescription": "Fan zone with big-screen match viewing, games, and player meet-and-greets.",
+    "fullDescription": "Cricket Premier Fan Fest is a fan zone experience featuring big-screen live match viewing, cricket-themed games and challenges, food stalls, and surprise meet-and-greets with former state-level players. Perfect for families and cricket fans of all ages.",
+    "schedule": [
+      { "time": "16:00", "activity": "Fan zone opens" },
+      { "time": "17:00", "activity": "Cricket challenge games" },
+      { "time": "19:00", "activity": "Big-screen match viewing begins" },
+      { "time": "21:30", "activity": "Player meet-and-greet" }
+    ],
+    "organizer": { "name": "Boundary Line Events", "email": "fanfest@boundaryline.in", "phone": "+91 96200 99001" }
+  }
+]

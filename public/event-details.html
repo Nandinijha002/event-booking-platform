@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Details — Mela Nights</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="navbar">
+  <div id="navLights" class="light-string"></div>
+  <div class="navbar-inner">
+    <a href="index.html" class="brand"><span class="brand-mark">🎟️</span> Mela Nights</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="events.html">Explore Events</a>
+      <a href="admin.html">Admin Dashboard</a>
+      <a href="index.html#footer-contact">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="details-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="index.html">Home</a> / <a href="events.html">Events</a> / <span id="crumbName">Loading...</span></p>
+      <span class="eyebrow" id="eventCategory">Category</span>
+      <h1 id="eventName" style="margin-top:10px;">Loading event...</h1>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="detailsContent" class="details-layout" style="display:none;">
+      <!-- LEFT: main info -->
+      <div>
+        <div class="detail-poster" id="eventPoster">🎫</div>
+
+        <div class="info-card">
+          <h3>Event Information</h3>
+          <div class="detail-meta-list">
+            <div class="dml-row"><span class="dml-icon">📅</span><div><div class="dml-label">Date</div><div class="dml-value" id="infoDate">-</div></div></div>
+            <div class="dml-row"><span class="dml-icon">🕒</span><div><div class="dml-label">Time</div><div class="dml-value" id="infoTime">-</div></div></div>
+            <div class="dml-row"><span class="dml-icon">📍</span><div><div class="dml-label">Venue</div><div class="dml-value" id="infoVenue">-</div></div></div>
+            <div class="dml-row"><span class="dml-icon">🏙️</span><div><div class="dml-label">City</div><div class="dml-value" id="infoCity">-</div></div></div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h3>About This Event</h3>
+          <p id="infoDescription" style="color:var(--text-muted);"></p>
+        </div>
+
+        <div class="info-card">
+          <h3>Event Schedule</h3>
+          <div id="scheduleList"></div>
+        </div>
+
+        <div class="info-card">
+          <h3>Organizer Details</h3>
+          <div class="detail-meta-list">
+            <div class="dml-row"><span class="dml-icon">🏢</span><div><div class="dml-label">Organized by</div><div class="dml-value" id="orgName">-</div></div></div>
+            <div class="dml-row"><span class="dml-icon">✉️</span><div><div class="dml-label">Email</div><div class="dml-value" id="orgEmail">-</div></div></div>
+            <div class="dml-row"><span class="dml-icon">📞</span><div><div class="dml-label">Phone</div><div class="dml-value" id="orgPhone">-</div></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: booking panel -->
+      <div class="booking-panel">
+        <div class="bp-price">
+          <strong id="bpPrice">₹0</strong>
+          <span>/ ticket</span>
+        </div>
+        <p class="bp-avail" id="bpAvail">- tickets available</p>
+
+        <!-- Countdown timer (Bonus Feature) -->
+        <p class="eyebrow" id="countdownLabel" style="margin-bottom:8px;">⏳ Booking closes in</p>
+        <div class="countdown" id="countdown">
+          <div class="cd-box"><span class="cd-num" id="cdDays">00</span><span class="cd-label">Days</span></div>
+          <div class="cd-box"><span class="cd-num" id="cdHours">00</span><span class="cd-label">Hrs</span></div>
+          <div class="cd-box"><span class="cd-num" id="cdMins">00</span><span class="cd-label">Mins</span></div>
+          <div class="cd-box"><span class="cd-num" id="cdSecs">00</span><span class="cd-label">Secs</span></div>
+        </div>
+
+        <form id="bookingForm" novalidate>
+          <div class="form-alert error" id="formAlert"></div>
+
+          <div class="form-group" id="fg-name">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" class="form-control" placeholder="e.g. Aarav Sharma" required>
+            <p class="form-error">Please enter your full name (min 2 characters).</p>
+          </div>
+
+          <div class="form-group" id="fg-email">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" class="form-control" placeholder="you@example.com" required>
+            <p class="form-error">Please enter a valid email address.</p>
+          </div>
+
+          <div class="form-group" id="fg-phone">
+            <label for="phone">Mobile Number</label>
+            <div class="phone-input-wrap">
+              <span class="phone-prefix">+91</span>
+              <input type="tel" id="phone" class="form-control" placeholder="98765 43210" maxlength="10" required>
+            </div>
+            <p class="form-error">Enter a valid 10-digit Indian mobile number.</p>
+          </div>
+
+          <div class="form-group" id="fg-tickets">
+            <label for="tickets">Number of Tickets</label>
+            <select id="tickets" class="form-control">
+              <option value="1">1 Ticket</option>
+              <option value="2">2 Tickets</option>
+              <option value="3">3 Tickets</option>
+              <option value="4">4 Tickets</option>
+              <option value="5">5 Tickets</option>
+            </select>
+            <p class="form-error">Select a valid number of tickets.</p>
+          </div>
+
+          <div class="total-row">
+            <span>Total Amount</span>
+            <strong id="totalAmount">₹0</strong>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" id="submitBtn">Confirm Booking →</button>
+          <p class="form-hint" style="text-align:center; margin-top:10px;">🔒 This is a demo checkout. No real payment is processed.</p>
+        </form>
+      </div>
+    </div>
+
+    <div id="loadingState" class="spinner"></div>
+    <div id="errorState" class="empty-state" style="display:none;">
+      <div class="es-emoji">⚠️</div>
+      <p id="errorMsg">Event not found.</p>
+      <a href="events.html" class="btn btn-outline btn-sm" style="margin-top:16px;">← Back to Events</a>
+    </div>
+  </div>
+
+  <div style="height:60px;"></div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-bottom" style="border-top:none; padding-top:0;">
+    <span>© 2026 Mela Nights. All rights reserved.</span>
+    <span>Made with ♥ in India — College Project (Task 3)</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/details.js"></script>
+<script src="js/booking.js"></script>
+</body>
+</html>

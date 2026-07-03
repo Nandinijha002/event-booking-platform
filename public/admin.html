@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard — Mela Nights</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="navbar">
+  <div id="navLights" class="light-string"></div>
+  <div class="navbar-inner">
+    <a href="index.html" class="brand"><span class="brand-mark">🎟️</span> Mela Nights</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="events.html">Explore Events</a>
+      <a href="admin.html" class="active">Admin Dashboard</a>
+    </nav>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="container page-header">
+    <span class="eyebrow">🎁 Bonus Feature</span>
+    <h1>Admin Dashboard</h1>
+    <p>Live view of every ticket booking submitted through the platform, pulled directly from the backend.</p>
+  </div>
+
+  <div class="container">
+    <div class="admin-stats" id="adminStats"></div>
+
+    <div class="filter-bar">
+      <input type="search" id="adminSearch" class="search-input" placeholder="🔍 Search by name, email, or booking ID...">
+      <button class="btn btn-outline btn-sm" id="refreshBtn">↻ Refresh</button>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Booking ID</th>
+            <th>Event</th>
+            <th>Attendee</th>
+            <th>Contact</th>
+            <th>Tickets</th>
+            <th>Amount</th>
+            <th>Booked On</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="bookingsBody">
+          <tr><td colspan="8" style="text-align:center; padding:40px;">Loading bookings...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div style="height:60px;"></div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-bottom" style="border-top:none; padding-top:0;">
+    <span>© 2026 Mela Nights. All rights reserved.</span>
+    <span>Made with ♥ in India — College Project (Task 3)</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

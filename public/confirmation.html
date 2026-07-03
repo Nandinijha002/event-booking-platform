@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booking Confirmed — Mela Nights</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="navbar">
+  <div id="navLights" class="light-string"></div>
+  <div class="navbar-inner">
+    <a href="index.html" class="brand"><span class="brand-mark">🎟️</span> Mela Nights</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="events.html">Explore Events</a>
+      <a href="admin.html">Admin Dashboard</a>
+    </nav>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="confirm-wrap" id="confirmWrap">
+    <div class="spinner"></div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-bottom" style="border-top:none; padding-top:0;">
+    <span>© 2026 Mela Nights. All rights reserved.</span>
+    <span>Made with ♥ in India — College Project (Task 3)</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  async function loadConfirmation() {
+    const wrap = document.getElementById('confirmWrap');
+    const params = new URLSearchParams(window.location.search);
+    const bookingId = params.get('bookingId');
+
+    if (!bookingId) {
+      wrap.innerHTML = `
+        <div class="empty-state">
+          <div class="es-emoji">⚠️</div>
+          <p>No booking found.</p>
+          <a href="events.html" class="btn btn-primary" style="margin-top:16px;">Browse Events</a>
+        </div>`;
+      return;
+    }
+
+    try {
+      const res = await fetch(`${API_BASE}/bookings/${bookingId}`);
+      const data = await res.json();
+
+      if (!data.success) {
+        wrap.innerHTML = `
+          <div class="empty-state">
+            <div class="es-emoji">⚠️</div>
+            <p>${data.message || 'Booking not found.'}</p>
+            <a href="events.html" class="btn btn-primary" style="margin-top:16px;">Browse Events</a>
+          </div>`;
+        return;
+      }
+
+      const b = data.booking;
+      wrap.innerHTML = `
+        <div class="confirm-icon">✅</div>
+        <h1>Booking Confirmed!</h1>
+        <p style="color:var(--text-muted); margin-top:10px;">A confirmation has been recorded for <strong>${b.name}</strong>. Please save your booking ID below.</p>
+
+        <div class="confirm-id">${b.bookingId}</div>
+
+        <div class="confirm-ticket">
+          <div class="confirm-row"><span>Event</span><span>${b.eventName}</span></div>
+          <div class="confirm-row"><span>Date</span><span>${formatDateIndian(b.eventDate)}</span></div>
+          <div class="confirm-row"><span>Venue</span><span>${b.eventVenue}</span></div>
+          <div class="confirm-row"><span>Name</span><span>${b.name}</span></div>
+          <div class="confirm-row"><span>Email</span><span>${b.email}</span></div>
+          <div class="confirm-row"><span>Mobile</span><span>+91 ${b.phone}</span></div>
+          <div class="confirm-row"><span>Tickets</span><span>${b.tickets}</span></div>
+          <div class="confirm-row"><span>Total Paid</span><span>${formatINR(b.totalAmount)}</span></div>
+        </div>
+
+        <div style="display:flex; gap:12px; justify-content:center; margin-top:28px; flex-wrap:wrap;">
+          <a href="events.html" class="btn btn-outline">Explore More Events</a>
+          <a href="index.html" class="btn btn-primary">Back to Home</a>
+        </div>
+      `;
+    } catch (err) {
+      wrap.innerHTML = `
+        <div class="empty-state">
+          <div class="es-emoji">⚠️</div>
+          <p>Could not load booking. Make sure the server is running.</p>
+        </div>`;
+    }
+  }
+
+  loadConfirmation();
+</script>
+</body>
+</html>

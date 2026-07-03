@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mela Nights — Discover & Book Events Across India</title>
+<meta name="description" content="Find and book tickets for concerts, tech summits, festivals, comedy shows and more, happening near you in India.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+
+<!-- ===================== NAVBAR ===================== -->
+<header class="navbar">
+  <div id="navLights" class="light-string"></div>
+  <div class="navbar-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">🎟️</span> Mela Nights
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html" class="active">Home</a>
+      <a href="events.html">Explore Events</a>
+      <a href="admin.html">Admin Dashboard</a>
+      <a href="events.html#footer-contact">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">🇮🇳 India's Event Booking Platform</span>
+        <h1>Book your seat at India's <span class="accent">best live events</span></h1>
+        <p>From Bollywood concerts to tech summits, Navratri nights to stand-up comedy — discover what's happening near you and book tickets in minutes.</p>
+        <div class="hero-cta">
+          <a href="events.html" class="btn btn-primary">Explore Events →</a>
+          <a href="#featured" class="btn btn-outline">See What's Trending</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>8+</strong><span>Live Events</span></div>
+          <div><strong>7</strong><span>Cities Covered</span></div>
+          <div><strong>10K+</strong><span>Happy Attendees</span></div>
+        </div>
+      </div>
+      <div class="hero-ticket">
+        <div class="ht-top">
+          <div>
+            <span class="eyebrow">Featured</span>
+            <h3>Sur Sangam — Live Music Night</h3>
+          </div>
+          <span class="ht-emoji">🎤</span>
+        </div>
+        <p class="ht-meta">📅 15 Aug 2026 · 7:00 PM</p>
+        <p class="ht-meta">📍 Jawaharlal Nehru Stadium, Delhi NCR</p>
+        <div class="ht-divider"></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span class="ht-price">₹1,499</span>
+          <a href="event-details.html?id=evt001" class="btn btn-primary btn-sm">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CATEGORIES ===================== -->
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Browse</span>
+          <h2>Explore by category</h2>
+        </div>
+      </div>
+      <div class="chip-row" id="categoryChips">
+        <a href="events.html?category=Music" class="chip">🎤 Music</a>
+        <a href="events.html?category=Technology" class="chip">💻 Technology</a>
+        <a href="events.html?category=Festival" class="chip">🪔 Festival</a>
+        <a href="events.html?category=Business" class="chip">📈 Business</a>
+        <a href="events.html?category=Comedy" class="chip">🎭 Comedy</a>
+        <a href="events.html?category=Workshop" class="chip">🎓 Workshop</a>
+        <a href="events.html?category=Sports" class="chip">🏏 Sports</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FEATURED EVENTS ===================== -->
+  <section class="section" id="featured" style="padding-top:0;">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Don't Miss Out</span>
+          <h2>Featured & upcoming events</h2>
+          <p>Hand-picked events happening across India this season.</p>
+        </div>
+        <a href="events.html" class="btn btn-outline btn-sm">View All Events →</a>
+      </div>
+      <div class="event-grid" id="featuredEvents">
+        <div class="spinner"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA BAND ===================== -->
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div style="background:linear-gradient(135deg, var(--surface-raised), var(--surface)); border:1px solid var(--border); border-radius:var(--radius); padding:44px; text-align:center;">
+        <h2 style="margin-bottom:10px;">Hosting an event?</h2>
+        <p style="color:var(--text-muted); margin-bottom:22px;">List your concert, workshop, or festival on Mela Nights and reach thousands of attendees across India.</p>
+        <a href="events.html" class="btn btn-primary">Get Started →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer" id="footer-contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand" style="margin-bottom:12px;">
+          <span class="brand-mark">🎟️</span> Mela Nights
+        </a>
+        <p>India's platform for discovering and booking tickets to concerts, festivals, tech events, and more.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="events.html">All Events</a></li>
+          <li><a href="events.html?category=Music">Concerts</a></li>
+          <li><a href="events.html?category=Festival">Festivals</a></li>
+          <li><a href="admin.html">Admin Dashboard</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>📍 Bengaluru, Karnataka, India</li>
+          <li>📞 +91 80 4567 1234</li>
+          <li>✉️ support@melanights.in</li>
+        </ul>
+        <div class="social-row" style="margin-top:14px;">
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="Twitter/X">🐦</a>
+          <a href="#" aria-label="Facebook">📘</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Mela Nights. All rights reserved.</span>
+      <span>Made with ♥ in India — College Project (Task 3)</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  async function loadFeatured() {
+    const wrap = document.getElementById('featuredEvents');
+    try {
+      const res = await fetch(`${API_BASE}/events`);
+      const data = await res.json();
+      if (!data.success || data.events.length === 0) {
+        wrap.innerHTML = `<div class="empty-state"><div class="es-emoji">🎪</div>No events available right now.</div>`;
+        return;
+      }
+      const featured = data.events.slice(0, 4);
+      wrap.innerHTML = featured.map(renderCard).join('');
+    } catch (err) {
+      wrap.innerHTML = `<div class="empty-state"><div class="es-emoji">⚠️</div>Could not load events. Is the server running?</div>`;
+    }
+  }
+
+  function renderCard(e) {
+    return `
+    <a href="event-details.html?id=${e.id}" class="ticket-card">
+      <div class="tc-banner">
+        <span class="tc-category">${CATEGORY_ICON[e.category] || '🎫'} ${e.category}</span>
+        <span class="tc-price-tag">${formatINR(e.price)}</span>
+        ${e.image}
+      </div>
+      <div class="tc-body">
+        <h3>${e.name}</h3>
+        <div class="tc-meta">
+          <span>📅 ${formatDateIndian(e.date)} · ${formatTime12h(e.time)}</span>
+          <span>📍 ${e.venue}, ${e.city}</span>
+        </div>
+        <p class="tc-desc">${e.shortDescription}</p>
+      </div>
+      <div class="tc-perforation"></div>
+      <div class="tc-footer">
+        <span class="tc-avail"><strong>${e.ticketsAvailable}</strong> tickets left</span>
+        <span class="btn btn-primary btn-sm">View →</span>
+      </div>
+    </a>`;
+  }
+
+  loadFeatured();
+</script>
+</body>
+</html>
